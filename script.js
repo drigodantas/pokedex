@@ -1,11 +1,13 @@
+const pokeDiv = document.querySelector('.pokeDIV');
 const pokeForm = document.querySelector('.pokeForm');
 const pokeInput = document.querySelector('.pokeInput');
 const pokeImage = document.querySelector('.pokeImage');
-const pokeName = document.querySelector('.pokeName')
-const pokeType = document.querySelector('.pokeType')
+const pokeName = document.querySelector('.pokeName');
+const pokeType = document.querySelector('.pokeType');
 
 let pokeValue;
 pokeImage.style.display = "none"
+pokeDiv.style.display =  "none"
 
 const pokemon = async function receberPoke(pokemon) { 
 
@@ -13,7 +15,7 @@ const pokemon = async function receberPoke(pokemon) {
     
 
     if (pokeAPI.status >= 400){
-        pokeName.innerText = "Pokemon não encontrado"
+        pokeName.innerText = "Pokemon não encontrado!"
         pokeImage.style.display = "none"
         pokeType.innerText = ""
 
@@ -26,7 +28,7 @@ const pokemon = async function receberPoke(pokemon) {
 
 async function exibirPoke() {
     pokeName.innerText = "Procurando pokemon"
-
+    pokeDiv.style.display = "block"
     const pokemonData = await pokemon(pokeValue)
     
     //image
@@ -42,10 +44,15 @@ async function exibirPoke() {
 
     //type
     if(pokemonData['types'].length === 2) {
-    return pokeType.innerText = `Tipos: ${pokemonData['types'][0]['type']['name']} / ${pokemonData['types'][1]['type']['name']}`
+        pokeType.innerText = `Tipos: ${pokemonData['types'][0]['type']['name']} / ${pokemonData['types'][1]['type']['name']}`
+    } else {
+        pokeType.innerText = `Tipo: ${pokemonData['types'][0]['type']['name']}`
     }
 
-    pokeType.innerText = `Tipo: ${pokemonData['types'][0]['type']['name']}`
+    
+    pokeDiv.classList.remove("grass", "fire", "bug", "normal", "poison", "ground", "fairy", "water", "fighting", "psychic", "electric", "ghost", "rock", "ice", "dragon", "flying", "dark", "steel")
+    const type = pokemonData.types[0].type.name
+    pokeDiv.classList.add(type)
     
 }
 
