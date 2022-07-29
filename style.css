@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+    color: #f9d000;
+    font-family: 'Fira Code', monospace;
+    margin: 0;
+    padding: 0;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.23);
+}
+
+body {
+    background-color: black;
+    font-size: 1.3em;
+    line-height: 1.4em;
+}
+
+.main-section {
+    background: #0164B7;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 0.5em;
+    padding: 1em;
+    width: 80%;
+}
+
+h1 {
+    text-align: center;
+    
+}
+
+.pokeForm {
+    margin: 20px auto;
+}
+
+label {
+    margin: auto;
+}
+
+.pokeInput {
+    display: block;
+    color: black;
+    height: 3em;
+    margin: 10px auto;
+    padding: 5px;
+    text-shadow: none;
+    width: 98%;
+}
+
+.btn-search {
+    background-color: #f9d000;
+    color: black;
+    cursor: pointer;
+    display: block;
+    height: 3em;
+    margin: 5px auto;
+    text-shadow: none;
+    transition: 70ms;
+    width: 98%;
+}
+
+.btn-search:hover {
+    background-color: white;
+    font-weight: bold;
+
+}
+
+.pokeDIV {
+    background-color: #004075;
+    border-radius: 5px;
+    margin: auto;
+    text-align: center;
+    width: 98%;
+}
+
+.pokeName {
+    text-transform: capitalize;
+    padding: 5px;
+}
