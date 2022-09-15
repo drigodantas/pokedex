@@ -1,154 +1,165 @@
 * {
-    box-sizing: border-box;
-    font-family: 'Fira Code', monospace;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  font-family: "Fira Code", monospace;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --black: #000;
+  --blue: #0164b7;
+  --yellow: #f9d000;
 }
 
 body {
-    background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(19,19,19,1) 100%);
-    color: #f9d000;
-    font-size: 1.3em;
-    line-height: 1.4em;
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.23);
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(19, 19, 19, 1) 100%
+  );
+  color: var(--yellow);
+  font-size: 1.3em;
+  line-height: 1.4em;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.23);
 }
 
 .main-section {
-    background: #0164B7;
-    border-radius: 5px;
-    margin: auto;
-    margin-top: 0.5em;
-    padding: 1em;
-    width: 80%;
+  background: var(--blue);
+  border-radius: 5px;
+  margin: auto;
+  margin-top: 0.5em;
+  padding: 1em;
+  width: 80%;
 }
 
 h1 {
-    text-align: center;
-    margin-bottom: 10px;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .pokeForm {
-    margin: 20px auto;
+  margin: 20px auto;
 }
 
 label {
-    margin: 1vw; 
+  margin: 1vw;
 }
 
 .pokeInput {
-    display: block;
-    color: black;
-    height: 3em;
-    margin: 10px auto;
-    padding: 5px;
-    text-shadow: none;
-    width: 98%;
+  display: block;
+  color: var(--black);
+  height: 3em;
+  margin: 10px auto;
+  padding: 5px;
+  text-shadow: none;
+  width: 98%;
 }
 
 .btn-search {
-    background-color: #f9d000;
-    color: black;
-    cursor: pointer;
-    display: block;
-    font-size: 0.8em;
-    font-weight: bold;
-    height: 3em;
-    margin: 5px auto;
-    text-shadow: none;
-    transition: 70ms;
-    width: 98%;
+  background-color: var(--yellow);
+  color: var(--black);
+  cursor: pointer;
+  display: block;
+  font-size: 0.8em;
+  font-weight: bold;
+  height: 3em;
+  margin: 5px auto;
+  text-shadow: none;
+  transition: 100ms;
+  width: 98%;
 }
 
 .btn-search:hover {
-    background-color: #0164B7;
-    border-color: #f9d000 ;
-    color: #f9d000;
-
+  font-size: 0.9em;
 }
 
 .pokeDIV {
-    background-color: #004075;
-    border-radius: 5px;
-    margin: auto;
-    padding: 20px;
-    text-align: center;
-    width: 98%;
-    -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
-    box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+  background-color: #004075;
+  border-radius: 5px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  width: 98%;
+  -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
+  box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000,
+    5px 5px 15px 5px rgba(0, 0, 0, 0);
 }
 
 .pokeName {
-    text-transform: capitalize;
-    padding: 5px;
+  padding: 5px;
+  text-transform: capitalize;
 }
 
 .grass {
-    color: rgb(0, 136, 0);
+  color: rgb(0, 136, 0);
 }
 
 .fire {
-    color: rgb(237, 111, 0);
+  color: rgb(237, 111, 0);
 }
 
-.water, .ice {
-    color: #85D9FD;
+.water,
+.ice {
+  color: #85d9fd;
 }
 
 .bug {
-    color: rgb(0, 196, 0);
+  color: rgb(0, 196, 0);
 }
 
-.normal, .flying {
-    color: rgb(255, 255, 255);
+.normal,
+.flying {
+  color: rgb(255, 255, 255);
 }
 
 .poison {
-    color: rgb(129, 11, 129);
-    -webkit-text-stroke-width: 0.25px;
-    -webkit-text-stroke-color: white;
+  color: rgb(129, 11, 129);
+  -webkit-text-stroke-width: 0.25px;
+  -webkit-text-stroke-color: white;
 }
 
 .electric {
-    color: #f9d000;
+  color: var(--yellow);
 }
 
 .ground {
-    color: #6a4500;
-    -webkit-text-stroke-width: 0.25px;
-    -webkit-text-stroke-color: white;
+  color: #6a4500;
+  -webkit-text-stroke-width: 0.25px;
+  -webkit-text-stroke-color: white;
 }
 
 .fairy {
-    color: #e0989b;
+  color: #e0989b;
 }
 
 .fighting {
-    color: #DC6125;
+  color: #dc6125;
 }
 
 .psychic {
-    color: #C488B0;
+  color: #c488b0;
 }
 
 .rock {
-    color: #AEB0A7;
+  color: #aeb0a7;
 }
 
 .ghost {
-    color: #B571AA;
+  color: #b571aa;
 }
 
 .dragon {
-    color: #C1B32F
+  color: #c1b32f;
 }
 
 .dark {
-    color: #1C3035;
-    -webkit-text-stroke-width: 0.25px;
-    -webkit-text-stroke-color: white;
+  color: #1c3035;
+  -webkit-text-stroke-width: 0.25px;
+  -webkit-text-stroke-color: white;
 }
 
 .steel {
-    color: #B5B3AC;
+  color: #b5b3ac;
 }
